@@ -82,6 +82,8 @@ table{
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid #2e2e30;
+	z-index: 10000;
+	width: 1196px;
 }
 .wrapper{
 	width: 1198px;
@@ -180,7 +182,10 @@ table{
 	left: -31px;
 	z-index: 2;
 }
-
+.login:hover,
+.register:hover{
+	opacity:0.8;
+}
 .buy-domain{
 	padding: 85px 0 90px;
 	margin: 0 auto;
@@ -344,7 +349,20 @@ table{
 	border-radius: 50%;
 	border: 6px solid;
 	margin-bottom: 9px;
+	position: relative;
 }
+.rounded-shape.yellow:before{
+	content: '';
+	width: 20px;
+	height:20px;
+	background-color: #fff;
+	position: relative;
+	left: 5px;
+	top: 5px;
+}
+
+
+
 .package table .price td,
 .package table .select td{
 	text-align: center;

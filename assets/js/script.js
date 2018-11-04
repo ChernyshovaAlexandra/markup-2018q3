@@ -1,9 +1,23 @@
 $(document).ready(function () {
-    console.log(1);
+    $("a.topLink").click(function() {
+        $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top + "px"
+        }, {
+            duration: 500,
+            easing: "swing"
+        });
+    });
+    $(window).scroll(function () {
+        if($(this).scrollTop() > 1) {
+            $('.header-inner').css({
+                'position': 'fixed',
+                'background-color': 'rgba(0,0,0, 0.2)'
+            });
+        }
+    });
    $('.menu').children('li').click(function(){
        $('.menu').children('li').removeClass('active');
        $(this).addClass('active');
-       console.log(2)
    });
 
    $('.searching-form').click(function () {
